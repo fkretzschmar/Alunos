@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/swagger/(.*)",
+            "destination": "/swagger"
+        }
+    ]
+}
