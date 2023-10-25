@@ -1,0 +1,169 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Escola",
+    "description": "Esta API serve para consultar, atualizar, cadastrar e remover alunos da escola EE.Antonio Raposo Tavares.",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5500",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/alunos": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "nome",
+            "type": "string",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "idade",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nota_primeiro_semestre",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nota_segundo_semestre",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nome_professor",
+            "type": "string",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "numero_sala",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nome",
+            "type": "string",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "idade",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nota_primeiro_semestre",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nota_segundo_semestre",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "nome_professor",
+            "type": "string",
+            "required": true,
+            "in": "query"
+          },
+          {
+            "name": "numero_sala",
+            "type": "number",
+            "required": true,
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/alunos/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  }
+}
