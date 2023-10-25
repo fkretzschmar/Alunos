@@ -1,18 +1,12 @@
 import { Router } from "express";
 import { Controller } from './controller';
 
-
 const router = Router();
 
-interface AlunoDT {
-    ID: number;
-    name: string;
-    idade: number;
-    nota_primeiro_semestre: number;
-    nota_segundo_semestre: number;
-    nome_professor: string;
-    numero_sala: number;
-}
+router.get("/", (req, res) => {
+    // #swagger.ignore = true
+    res.redirect("/swagger");
+});
 
 router.get("/alunos", async (req, res) => {
     const content = await Controller.GetAll();
