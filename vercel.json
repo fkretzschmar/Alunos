@@ -3,7 +3,7 @@
     "builds": [
         {
             "src": "start.ts",
-            "use": "@vercel/node --loader ts-node/esm --inspect"
+            "use": "@vercel/node"
         }
     ],
     "routes": [
