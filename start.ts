@@ -15,6 +15,4 @@ const doc = {
 
 const outputFile = './swagger-output.json';
 const endpointsFiles = [path.join(__dirname, 'routes/routes.ts')];
-swaggerAutogen()(outputFile, endpointsFiles, doc).then(async () => {
-  await import('./index.ts');
-})
+swaggerAutogen()(outputFile, endpointsFiles, doc)

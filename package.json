@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "devStart": "nodemon start.ts --ignore swagger-output.json",
-    "start": "node --loader ts-node/esm --inspect ./start.ts",
+    "start": "node --loader ts-node/esm --inspect ./index.ts",
+    "build": "node --loader ts-node/esm --inspect  ./start.ts ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "felipe",
