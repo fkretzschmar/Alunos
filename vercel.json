@@ -1,8 +1,15 @@
 {
-    "rewrites": [
+    "version": 2,
+    "builds": [
         {
-            "source": "/swagger/(.*)",
-            "destination": "/swagger"
+            "src": "start.ts",
+            "use": "@vercel/node --loader ts-node/esm --inspect"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "index.ts"
         }
     ]
 }

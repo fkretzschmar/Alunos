@@ -7,7 +7,7 @@ import swaggerOutput from './swagger-output.json';
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080;
 
 app.use("/", router);
 app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
